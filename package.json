@@ -5,7 +5,7 @@
   "description": "ShareEZ – Drop a file, share a 4-digit code, download within 24 hours",
   "scripts": {
     "install:all": "npm install --prefix server && npm install --prefix client",
-    "build": "npm run build --prefix client",
+    "build": "npm install --prefix server && npm install --prefix client && npm run build --prefix client",
     "start": "node server/index.js",
     "dev:server": "node server/index.js",
     "dev:client": "npm run dev --prefix client"
