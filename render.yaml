@@ -2,7 +2,7 @@ services:
   - type: web
     name: shareez
     runtime: node
-    buildCommand: npm install --prefix server && npm install --prefix client && npm run build --prefix client
+    buildCommand: npm install --prefix server && npm install --include=dev --prefix client && npm run build --prefix client
     startCommand: node server/index.js
     envVars:
       - key: NODE_ENV
